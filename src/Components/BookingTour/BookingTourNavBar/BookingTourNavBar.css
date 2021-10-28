@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.booking-tour-navbar{
+    width: 800px;
+    height: 40px;
+    margin: 10px 10px 10px 150px;
+}
+
+.booking-tour-contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-tour-contents button{
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: rgb(31, 30, 30);
+    color: #ffffff;
+}
+
+.booking-tour-contents button:hover{
+    background-color: #b6935b;
+}

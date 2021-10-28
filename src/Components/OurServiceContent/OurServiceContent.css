@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.our-service-content{
+    background-color: rgb(17, 17, 17);
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.our-service-content-h1{
+    color: #ffffff;
+    padding: 60px 0px 60px 10px;
+}

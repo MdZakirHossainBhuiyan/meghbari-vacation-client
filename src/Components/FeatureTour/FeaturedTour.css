@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.featuredTourItem-content{
+    height: 150px;
+    width: 500px;
+    display: flex;
+}
+
+.featuredTourItem-image{
+    height: 150px;
+    width: 150px;
+}
+
+.featuredTourItem-image img{
+    height: 150px;
+    width: 150px;
+}
+
+.featuredTourItem-info{
+    padding: 10px 10px 10px 20px;
+    color: #ffffff;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.featuredTourItem-info h3{
+    color: #b6935c;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.featuredTourItem-info p{
+    padding-top: 10px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.featuredTourItem-info button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #b6935c;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 13px;
+}

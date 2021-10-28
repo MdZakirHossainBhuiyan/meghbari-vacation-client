@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.booking-tour-cover{
+    width: 100%;
+    height: 600px;
+}
+
+.booking-tour-cover img{
+    width: 100%;
+    height: 600px;
+}
+
+.booking-tour-cover h1{
+    position: relative;
+    top: -150px;
+    padding-left: 100px;
+    color: #ffffff;
+    font-size: 70px;
+}

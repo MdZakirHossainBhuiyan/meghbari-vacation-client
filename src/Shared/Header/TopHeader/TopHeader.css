@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.topHeader{
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+}
+
+.th-container{
+    display: flex;
+}
+
+.Heading{
+    display: flex;
+    color: #b6935c;
+    width: 70%;
+    
+}
+
+.Heading p{
+    font-family: Times New Roman, Times, serif;
+    text-transform: uppercase;
+    padding: 17px 10px;
+    font-size: 12px;
+}
+
+.Heading h3{
+    font-family: Times New Roman, Times, serif;
+    padding: 20px 15px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.call-us-icon{
+    height: 40px;
+    width: 40px;
+    background-color: #b6935c;
+    color: black;
+    border-radius: 50%;
+    padding: 10px 12px;
+    margin: 15px 0px;
+}
+
+.icons-design{
+    color: #b6935c;
+    margin-top: 6px;
+}
+
+.contact{
+    width: 30%;
+    display: flex;
+}
+
+.call-us-info{
+    padding-left: 10px;
+    padding-top: 8px;
+    color: white;
+    font-family: Times New Roman, Times, serif;
+}
+
+.log-btn{
+    margin-left: 30px;
+}
+
+.log-btn button{
+    width: 120px;
+    height: 40px;
+    background-color: #b6935c;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    margin-top: 12px;
+    font-family: Times New Roman, Times, serif;
+    text-transform: uppercase;
+}
+
+.log-btn button:hover{
+    color: white;
+}
+

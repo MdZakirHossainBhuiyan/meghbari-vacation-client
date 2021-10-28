@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.purchase-contain{
+    background-color: #19191a;
+    width: 100%;
+    height: 200px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.purchase-info{
+    display: flex;
+    align-items: center;
+}
+
+.purchase-info h1{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.purchase-info button{
+   width: 200px;
+   height: 50px;
+   border: none;
+   background-color: #b6935b;
+   color: #ffffff;
+   margin-left: 300px;
+   font-weight: 700;
+}

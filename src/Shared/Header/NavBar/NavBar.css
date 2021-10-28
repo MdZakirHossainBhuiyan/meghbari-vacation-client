@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container{
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container a{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-left: 35px;
+    font-family: Times New Roman, Times, serif;
+    font-size: 13px;
+}
+
+.nav-item a:hover{
+    color: #b6935c;
+}

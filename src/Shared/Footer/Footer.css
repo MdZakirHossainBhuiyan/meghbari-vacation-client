@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.footer-contain{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    color: gray;
+    padding-top: 13px;
+}
+
+.copy-right{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-right: 600px;
+    margin-left: 100px;
+}
+
+.copy-right p{
+    padding-left: 5px;
+}
+
+.rules-regulation{
+    display: flex;
+}
+
+.rr-info{
+    margin-right: 30px;
+}
+
+.rr-info p:hover{
+    color: #b6935b;
+}

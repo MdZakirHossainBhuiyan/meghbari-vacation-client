@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.booking-tour-inquiry-form{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 50px;
+}
+
+.booking-tour-inquiry-form-content h1{
+    color: #b6935b;
+    padding-top: 100px;
+    font-size: 20px;
+}
+
+.booking-tour-inquiry-form-content p{
+    color: #ffffff;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.booking-tour-inquiry-form-content label{
+    color: #ffffff;
+}
+
+.booking-tour-inquiry-form-content div{
+    padding-top: 40px;
+}
+
+.booking-tour-inquiry-form-content button{
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: #b6935b;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.booking-tour-inquiry-form-content span{
+    color: #b6935b;
+}

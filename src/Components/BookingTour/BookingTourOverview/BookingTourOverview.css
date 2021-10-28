@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.booking-tour-overview{
+    width: 800px;
+    background-color: rgb(31, 30, 30);
+    height: auto;
+    margin: -375px 0px 0px 150px;
+    padding: 30px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.booking-tour-overview h1{
+    color: #b6935b;
+    font-size: 20px;
+}
+
+.booking-tour-overview p{
+    color: #ffffff;
+    font-size: 15px;
+    padding-top: 15px;
+}

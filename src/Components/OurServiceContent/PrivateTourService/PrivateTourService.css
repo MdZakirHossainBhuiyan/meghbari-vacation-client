@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.luxury-tour{
+    width: 100%;
+    height: 507px;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.lt-info{
+    width: 50%;
+    background-color: #242323;
+}
+
+.lt-info-content{
+    height: 420px;
+    width: 80%;
+    margin: 50px 65px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.lt-info-content h1{
+    color: #b6935c;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.lt-info-content p{
+    color: #ffffff;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.lt-img{
+    width: 50%;
+    height: 507px;
+    background-color: gray;
+}
+
+.lt-img img{
+    width: 100%;
+    height: 507px;
+}
+

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.serviceItem-content{
+    height: 130px;
+    width: 500px;
+    display: flex;
+}
+
+.serviceItem-image{
+    height: 130px;
+    width: 150px;
+}
+
+.serviceItem-image img{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    border: 3px solid #3E88A5;
+}
+
+.serviceItem-info{
+    padding: 10px 10px 10px 20px;
+    color: #ffffff;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.serviceItem-info h3{
+    color: #b6935c;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.serviceItem-info p{
+    padding-top: 10px;
+    text-align: justify;
+    font-size: 15px;
+}

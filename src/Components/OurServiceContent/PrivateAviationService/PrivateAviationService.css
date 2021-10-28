@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.privateAviation-tour{
+    width: 100%;
+    height: 507px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.pa-info{
+    width: 50%;
+    background-color: #242323;
+}
+
+.pa-info-content{
+    height: 420px;
+    width: 80%;
+    margin: 50px 65px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.pa-info-content h1{
+    color: #b6935c;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.pa-info-content p{
+    color: #ffffff;
+    font-size: 15px;
+    padding-top: 20px;
+}
+
+.pa-img{
+    width: 50%;
+    height: 507px;
+}
+
+.pa-img img{
+    width: 100%;
+    height: 507px;
+}
