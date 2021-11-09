@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.booking-form{
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+.booking-form-content{
+    width: 100%;
+    height: auto;
+    padding-left: 250px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.booking-form-main-area{
+    background-color: rgb(44, 44, 44);
+    margin: 10px 10px;
+}
+
+.booking-form-top-icon{
+    text-align: center;
+    color: #b6935b;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.booking-form-main-area h1{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.booking-form-main-area span{
+    color: #b6935b;
+}
+
+.booking-form-area{
+    color: #ffffff;
+}
+
+.booking-form-area div{
+    margin-top: 10px;
+}
+
+.booking-form-area button{
+    width: 200px;
+    height: 40px;
+    margin: 20px 0px 30px 0px;
+    border: none;
+    background-color: #b6935b;
+    color: #ffffff;
+}
+
+.booking-form-payment-icon{
+    color: #b6935b;
+    margin-right: 5px;
+}
+
+.booking-form-table{
+    margin: 20px 10px;
+    border: 2px solid #b6935b;
+}
+
+.booking-form-table h1{
+    text-align: center;
+    font-size: 17px;
+    color: #b6935b;
+}
+
+.booking-form-table th{
+    text-align: center;
+}
+
+.booking-form-cost{
+    text-align: center;
+}
+
+.booking-form-bill{
+    color: #b6935b;
+}
+
+.booking-form-pay-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.booking-form-pay-btn p{
+    padding-right: 300px;
+}
+
+.booking-form-area label{
+    color: #ffffff;
+}

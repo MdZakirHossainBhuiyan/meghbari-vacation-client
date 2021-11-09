@@ -10,34 +10,55 @@ import OurServiceHome from './Pages/OurService/OurServiceHome';
 import Login from './Pages/Login/Login';
 import BookingTour from './Pages/BookingTour/BookingTour';
 import BookingTourInquiryForm from './Components/BookingTour/BookingTourInquiryForm/BookingTourInquiryForm';
+import BookingForm from './Components/DashBoard/BookingForm/BookingForm';
+import AddNewTour from './Components/DashBoard/AddNewTour/AddNewTour';
+import { createContext } from 'react';
+import { useState } from 'react';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
+
+export const UserContext = createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
-    <Router>
-      <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/ourService">
-            <OurServiceHome />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/booking">
-            <BookingTour />
-          </Route>
-          <Route path="/booking/inquiry">
-            <BookingTourInquiryForm />
-          </Route>
-        </Switch>
-    </Router>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <Router>
+        <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/ourService">
+              <OurServiceHome />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <PrivateRoute exact path="/booking">
+              <BookingTour />
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <DashBoard />
+            </PrivateRoute>
+            <PrivateRoute path="/booking/inquiry">
+              <BookingTourInquiryForm />
+            </PrivateRoute>
+            <PrivateRoute path="/bookingform">
+              <BookingForm />
+            </PrivateRoute>
+            <PrivateRoute path="/newtour">
+              <AddNewTour />
+            </PrivateRoute>
+          </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 

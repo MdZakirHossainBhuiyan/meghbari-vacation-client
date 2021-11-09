@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import './NavBar.css';
 
 const NavBar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     return (
         <div className="navbar-container">
             <div className="nav-item">
-                <a href="/home">Home</a>
+                <Link to="/home">Home</Link>
             </div>
             <div className="nav-item">
-                <a href="/tours">tours</a>
+                <Link to="/tours">tours</Link>
             </div>
             <div className="nav-item">
-                <a href="/destinations">destinations</a>
+                <Link to="/destinations">destinations</Link>
             </div>
             <div className="nav-item">
-                <a href="/about">about us</a>
+                <Link to="/about">about us</Link>
             </div>
             <div className="nav-item">
-                <a href="/ourService">services</a>
+                <Link to="/ourService">services</Link>
             </div>
+            {
+                loggedInUser.email ? <div className="nav-item">
+                    <Link to="/dashboard">Dashboard</Link>
+                </div> : <div></div>
+            }
         </div>
     );
 };

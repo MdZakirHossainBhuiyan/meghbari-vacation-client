@@ -1,9 +1,5 @@
 import React from 'react';
 import './PopularDestination.css';
-import pd2 from '../../images/pt1.jpg';
-import pd3 from '../../images/pd3.jpg';
-import pd4 from '../../images/pd4.jpg';
-import pd5 from '../../images/pd5.jpg';
 
 const PopularDestination = () => {
     return (

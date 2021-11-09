@@ -1,10 +1,29 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSuitcaseRolling, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+import React, { useContext } from 'react';
 import './TopHeader.css';
 import {Link} from "react-router-dom";
+import { UserContext } from '../../../App';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import firebaseConfig from '../../../Pages/Login/firebase.config';
 
 const TopHeader = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    if (firebase.apps.length === 0) {
+        firebase.initializeApp(firebaseConfig);
+    }
+
+    const handleLogout = () => {
+        firebase.auth().signOut().then(() => {
+            const signedInUser = false;
+            setLoggedInUser(signedInUser);
+        }).catch((error) => {
+
+        });
+    }
+
     return (
         <div className="topHeader">
             <div className="container th-container">
@@ -21,7 +40,9 @@ const TopHeader = () => {
                         <p><small>Call Us: <br /> +880 1675-026895</small></p>
                     </div>
                     <div className="log-btn">
-                        <Link to="/login"><button>Login</button></Link>
+                        {
+                            loggedInUser.email ? <button onClick={handleLogout}>Logout</button> : <Link to="/login"><button>Login</button></Link>
+                        }
                     </div>
                 </div>
             </div>

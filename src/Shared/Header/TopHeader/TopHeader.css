@@ -70,16 +70,16 @@
     width: 120px;
     height: 40px;
     background-color: #b6935c;
-    color: black;
-    border-radius: 5px;
+    color: #ffffff;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 12px;
     font-family: Times New Roman, Times, serif;
     text-transform: uppercase;
 }
 
 .log-btn button:hover{
-    color: white;
+    color: #b6935c;
+    background-color: rgb(44, 44, 44);
 }
 

@@ -45,7 +45,7 @@ const BookingTourReservation = () => {
                 </div>
             </div>
             <div className="booked-btn">
-                <Link><button>Booked Your Seat</button></Link>
+                <Link to="/bookingform"><button>Booked Your Seat</button></Link>
             </div>
         </section>
     );
