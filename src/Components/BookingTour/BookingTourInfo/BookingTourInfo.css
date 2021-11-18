@@ -4,14 +4,18 @@
 }
 
 .booking-tour-info{
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.booking-tour-info-content{
     background-color: rgb(20, 20, 20);
     width: 300px;
     height: auto;
-    position: relative;
-    top: -50px;
-    left: 960px;
     padding: 20px;
-    font-family: 'Roboto Slab', sans-serif;
 }
 
 .booking-tour-info h1{

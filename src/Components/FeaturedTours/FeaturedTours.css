@@ -20,7 +20,7 @@
 .featured-tours-items{
     margin-top: 50px;
     display: grid;
-    grid: 130px / auto auto;
+    grid: auto / auto auto;
     grid-gap: 30px;
     padding: 10px;
     padding-bottom: 50px;

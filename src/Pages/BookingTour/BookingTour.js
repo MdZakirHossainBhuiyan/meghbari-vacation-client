@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 import BookingTourCover from '../../Components/BookingTour/BookingTourCover/BookingTourCover';
 import BookingTourIncludingInfo from '../../Components/BookingTour/BookingTourIncludingInfo/BookingTourIncludingInfo';
 import BookingInfo from '../../Components/BookingTour/BookingTourInfo/BookingTourInfo';
@@ -11,16 +12,25 @@ import Footer from '../../Shared/Footer/Footer';
 import MainHeader from '../../Shared/Header/MainHeader/MainHeader';
 
 const BookingTour = () => {
+    const {tourId} = useParams();
+    const [selectedTour, setSelectedTour] = useState({});
+
+    useEffect(() => {
+        fetch('http://localhost:5000/booking/'+tourId)
+        .then(response => response.json())
+        .then(data => setSelectedTour(data))
+    }, [tourId])
+
+    console.log("selectedTour ",selectedTour);
+
     return (
         <main style={{backgroundColor: "black"}}>
             <MainHeader />
             <BookingTourCover />
-            <BookingTourNavBar />
-            <BookingInfo />
-            <BookingTourOverview />
-            <BookingTourItinerary />
-            <BookingTourIncludingInfo />
-            <BookingTourReservation />
+            <div style={{display: "flex"}}>
+                <BookingTourNavBar />
+                <BookingInfo />
+            </div>
             <Purchase />
             <Footer />
         </main>

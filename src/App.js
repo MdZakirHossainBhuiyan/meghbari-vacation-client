@@ -41,21 +41,21 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
-            <PrivateRoute exact path="/booking">
+            <Route path="/booking/:tourId">
               <BookingTour />
-            </PrivateRoute>
-            <PrivateRoute path="/dashboard">
+            </Route>
+            <Route path="/dashboard">
               <DashBoard />
-            </PrivateRoute>
-            <PrivateRoute path="/booking/inquiry">
+            </Route>
+            <Route path="/booking/inquiry">
               <BookingTourInquiryForm />
-            </PrivateRoute>
-            <PrivateRoute path="/bookingform">
+            </Route>
+            <Route path="/bookingform">
               <BookingForm />
-            </PrivateRoute>
-            <PrivateRoute path="/newtour">
+            </Route>
+            <Route path="/newtour">
               <AddNewTour />
-            </PrivateRoute>
+            </Route>
           </Switch>
       </Router>
     </UserContext.Provider>

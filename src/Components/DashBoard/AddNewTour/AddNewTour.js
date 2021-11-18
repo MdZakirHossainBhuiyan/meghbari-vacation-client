@@ -4,10 +4,12 @@ import React from 'react';
 import TopBar from '../TopBar/TopBar';
 import './AddNewTour.css';
 import { useState } from 'react';
+import { useHistory } from 'react-router';
 
 const AddNewTour = () => {
-    const [info, setInfo] = useState({});
-    const [file, setFile] = useState('');
+    const [info, setInfo] = useState(null);
+    const [file, setFile] = useState(null);
+    const history = useHistory();
 
     const handleBlur = e => {
         const newInfo = { ...info};
@@ -56,7 +58,14 @@ const AddNewTour = () => {
         .then(response => response.json())
         .then(data => {
             console.log("addTour", data);
+            if(data){
+                alert("New tour added successfully");
+                history.push("/");
+            }
         })
+        .catch( (err) => {
+            console.error(err);
+        });
     }
 
     return (
@@ -256,7 +265,7 @@ const AddNewTour = () => {
                                     <td colSpan="4">
                                         <div className="form-group">
                                             <label htmlFor="exampleInputServiceType">Cover Image*</label>
-                                            <input onChange={handleFileChange} type="file" className="form-control" name="coverImage" />
+                                            <input onChange={handleFileChange} type="file" className="form-control" placeholder="Picture" />
                                         </div>
                                     </td>
                                 </tr>

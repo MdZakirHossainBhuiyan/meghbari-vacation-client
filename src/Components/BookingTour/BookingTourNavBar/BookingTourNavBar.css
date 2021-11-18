@@ -5,7 +5,7 @@
 
 .booking-tour-navbar{
     width: 800px;
-    height: 40px;
+    height: auto;
     margin: 10px 10px 10px 150px;
 }
 
@@ -25,4 +25,10 @@
 
 .booking-tour-contents button:hover{
     background-color: #b6935b;
+}
+
+.booking-tour-component-info{
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
 }
