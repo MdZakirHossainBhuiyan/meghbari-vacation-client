@@ -9,6 +9,8 @@
     height: auto;
     font-family: 'Roboto Slab', sans-serif;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .popular-tour-content img{
@@ -43,4 +45,5 @@
     color: #ffffff;
     font-size: 15px;
     margin: 0px 0px 40px 70px;
+    justify-content: flex-end;
 }

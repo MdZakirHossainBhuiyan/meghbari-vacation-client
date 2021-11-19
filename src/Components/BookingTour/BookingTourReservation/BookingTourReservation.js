@@ -2,50 +2,62 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './BookingTourReservation.css';
 
-const BookingTourReservation = () => {
+const BookingTourReservation = ({selectedTour}) => {
+    let {seat} = selectedTour;
+
+    const startingDate = selectedTour.startDate;
+    const startingDay = +(startingDate[startingDate.length-2]+startingDate[startingDate.length-1]);
+    const today = (new Date()).getDate();
+    let remainingDay = startingDay - today;
+    if(remainingDay <= 0){
+        remainingDay = "Closed";
+        seat = "00";
+    }
+    
+
     return (
         <section className="booking-tour-reservation">
             <h1>Reservation</h1>
             <div className="reservation-info">
                 <div className="reservation-div">
                     <p>Starting Date:</p>
-                    <h3>5th Nov 2022</h3>
+                    <h3>{selectedTour.startDate}</h3>
                 </div>
                 <div className="reservation-div">
                     <p>Ending Date</p>
-                    <h3>15th Nov 2022</h3>
+                    <h3>{selectedTour.endDate}</h3>
                 </div>
                 <div className="reservation-div">
                     <p>Remaining day</p>
-                    <h3>08</h3>
+                    <h3>{remainingDay}</h3>
                 </div>
                 <div className="reservation-div">
                     <p>Total Seat:</p>
-                    <h3>45</h3>
+                    <h3>{seat}</h3>
                 </div>
                 <div className="reservation-div">
                     <p>Booked</p>
-                    <h3>22</h3>
+                    <h3>00</h3>
                 </div>
                 <div className="reservation-div">
                     <p>Available</p>
-                    <h3>23</h3>
+                    <h3>{seat}</h3>
                 </div>
                 <div className="reservation-div">
                     <p>Male Attended:</p>
-                    <h3>10</h3>
+                    <h3>00</h3>
                 </div>
                 <div className="reservation-div">
                     <p>Female Attended:</p>
-                    <h3>07</h3>
+                    <h3>00</h3>
                 </div>
                 <div className="reservation-div">
                     <p>Children</p>
-                    <h3>05</h3>
+                    <h3>00</h3>
                 </div>
             </div>
             <div className="booked-btn">
-                <Link to="/bookingform"><button>Booked Your Seat</button></Link>
+                <Link to="/bookingform"><button>Book Your Seat</button></Link>
             </div>
         </section>
     );

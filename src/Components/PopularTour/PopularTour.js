@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './PopularTour.css';
 
 const PopularTour = ({popularTour}) => {
+    const tourId = popularTour._id;
+
     return (
         <div className="popular-tour-content">
             <img src={`data:image/png;base64,${popularTour.image.img}`} alt="" />
@@ -11,7 +14,7 @@ const PopularTour = ({popularTour}) => {
             </div>
             <p className="pt-description">{popularTour.shortDescription}</p>
 
-            <button>BOOK NOW</button>
+            <Link to={"/booking/"+tourId}><button>BOOK NOW</button></Link>
         </div>
     );
 };

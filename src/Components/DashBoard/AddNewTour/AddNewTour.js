@@ -109,9 +109,9 @@ const AddNewTour = () => {
                                             <label htmlFor="exampleInputType">Tour Type*</label>
                                             <select onBlur={handleBlur} name="tourType" class="form-select" aria-label="Default select example">
                                                 <option value="Adventures">Adventures</option>
-                                                <option value="cityTours">City tours</option>
-                                                <option value="culinaryTours">Culinary tours</option>
-                                                <option value="dailyTours">Daily tours</option>
+                                                <option value="city Tours">City tours</option>
+                                                <option value="culinary Tours">Culinary tours</option>
+                                                <option value="daily Tours">Daily tours</option>
                                             </select>
                                         </div>
                                     </td>

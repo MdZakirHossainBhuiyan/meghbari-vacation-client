@@ -47,7 +47,7 @@ function App() {
             <Route path="/dashboard">
               <DashBoard />
             </Route>
-            <Route path="/booking/inquiry">
+            <Route exact path="/booking/inquiry">
               <BookingTourInquiryForm />
             </Route>
             <Route path="/bookingform">

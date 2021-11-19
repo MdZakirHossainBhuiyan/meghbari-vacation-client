@@ -1,12 +1,12 @@
 import React from 'react';
 import './BookingTourCover.css';
-import coverImage from '../../../images/pt1.jpg';
 
-const BookingTourCover = () => {
+const BookingTourCover = (props) => {
+    console.log(props.selectedTour);
     return (
         <section className="booking-tour-cover">
-            <img src={coverImage} alt="" />
-            <h1>Greece and Turkey adventure</h1>
+            <img src={`data:image/png;base64,${props.selectedTour?.image?.img}`} alt="" />
+            <h1>{props.selectedTour.title}</h1>
         </section>
     );
 };

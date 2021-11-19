@@ -31,7 +31,13 @@
 .entry-fee{
     color: #ffffff;
     font-size: 15px;
-    padding: 25px 0px;
+    padding-top: 20px;
+}
+
+.age-limitation{
+    color: #ffffff;
+    font-size: 15px;
+    padding-bottom: 25px;
 }
 
 .booking-tour-info span{

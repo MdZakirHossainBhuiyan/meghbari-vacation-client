@@ -6,7 +6,8 @@ import BookingTourOverview from '../BookingTourOverview/BookingTourOverview';
 import BookingTourReservation from '../BookingTourReservation/BookingTourReservation';
 import './BookingTourNavBar.css';
 
-const BookingTourNavBar = () => {
+const BookingTourNavBar = ({selectedTour}) => {
+    console.log(selectedTour.overview);
     const [overviewBtn, setOverviewBtn] = useState(true);
     const [itineraryBtn, setItineraryBtn] = useState(false);
     const [includeBtn, setIncludeBtn] = useState(false);
@@ -49,10 +50,10 @@ const BookingTourNavBar = () => {
                 <button onClick={handleReservation}>Reservation</button>
             </div>
             <div className="booking-tour-component-info">
-                { overviewBtn && <BookingTourOverview /> }
+                { overviewBtn && <BookingTourOverview selectedTour={selectedTour} /> }
                 { itineraryBtn && <BookingTourItinerary /> }
-                { includeBtn && <BookingTourIncludingInfo /> }
-                { reservationBtn && <BookingTourReservation /> }
+                { includeBtn && <BookingTourIncludingInfo selectedTour={selectedTour} /> }
+                { reservationBtn && <BookingTourReservation selectedTour={selectedTour} /> }
             </div>
         </section>
     );
