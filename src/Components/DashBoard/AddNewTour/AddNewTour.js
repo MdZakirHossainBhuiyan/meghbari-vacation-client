@@ -4,12 +4,12 @@ import React from 'react';
 import TopBar from '../TopBar/TopBar';
 import './AddNewTour.css';
 import { useState } from 'react';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 
 const AddNewTour = () => {
     const [info, setInfo] = useState(null);
     const [file, setFile] = useState(null);
-    const history = useHistory();
+    // const history = useHistory();
 
     const handleBlur = e => {
         const newInfo = { ...info};
@@ -22,7 +22,9 @@ const AddNewTour = () => {
         setFile(newFile);
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert("New tour added successfully");
         const formData = new FormData()
         formData.append('file', file);
         formData.append('title', info.title);
@@ -57,10 +59,8 @@ const AddNewTour = () => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log("addTour", data);
             if(data){
-                alert("New tour added successfully");
-                history.push("/");
+                console.log("tour added");
             }
         })
         .catch( (err) => {

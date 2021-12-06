@@ -44,18 +44,18 @@ function App() {
             <Route path="/booking/:tourId">
               <BookingTour />
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <DashBoard />
-            </Route>
-            <Route exact path="/booking/inquiry">
+            </PrivateRoute>
+            <PrivateRoute exact path="/booking/inquiry">
               <BookingTourInquiryForm />
-            </Route>
-            <Route path="/bookingform">
+            </PrivateRoute>
+            <PrivateRoute path="/bookingform/:selectedTourId">
               <BookingForm />
-            </Route>
-            <Route path="/newtour">
+            </PrivateRoute>
+            <PrivateRoute path="/newtour">
               <AddNewTour />
-            </Route>
+            </PrivateRoute>
           </Switch>
       </Router>
     </UserContext.Provider>

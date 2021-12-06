@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.credit-card{
+    background-color: rgb(11, 104, 110);
+    padding: 50px;
+}
+
+.credit-card-form{
+    margin-top: 25px;
+    display: grid;
+    grid: auto / auto auto;
+    justify-content: center;
+}
+
+.credit-card-form input{
+    width: 95%;
+    margin: 10px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s;
+}
+
+.credit-card-form button{
+    width: 50%;
+    height: 40px;
+    background-color: #b6935b;
+    border: none;
+    color: #ffffff;
+    border-radius: .25rem;
+    margin-top: 20px;
+    
+}
+
+.card-form-button{
+    grid-column: 3/2;
+    display: flex;
+    justify-content: flex-end;
+}

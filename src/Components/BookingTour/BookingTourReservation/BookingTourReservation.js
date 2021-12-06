@@ -4,13 +4,14 @@ import './BookingTourReservation.css';
 
 const BookingTourReservation = ({selectedTour}) => {
     let {seat} = selectedTour;
+    const selectedTourId = selectedTour._id;
 
     const startingDate = selectedTour.startDate;
     const startingDay = +(startingDate[startingDate.length-2]+startingDate[startingDate.length-1]);
     const today = (new Date()).getDate();
     let remainingDay = startingDay - today;
     if(remainingDay <= 0){
-        remainingDay = "Closed";
+        remainingDay = "00";
         seat = "00";
     }
     
@@ -57,7 +58,9 @@ const BookingTourReservation = ({selectedTour}) => {
                 </div>
             </div>
             <div className="booked-btn">
-                <Link to="/bookingform"><button>Book Your Seat</button></Link>
+                {
+                    (remainingDay>0)?<Link to={"/bookingform/"+selectedTourId}><button>Book Your Seat</button></Link>:<button>Booking Closed</button>
+                }
             </div>
         </section>
     );
