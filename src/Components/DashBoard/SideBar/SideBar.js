@@ -44,22 +44,6 @@ const SideBar = () => {
             </div>
             <div className="dashboard-sidebar-content">
                 <div className="dashboard-sidebar-icon">
-                <FontAwesomeIcon icon={faBusAlt} />
-                </div>
-                <div className="dashboard-sidebar-btn">
-                    <Link to="/alltourbyemail"><button>Your All Tours</button></Link>
-                </div>
-            </div>
-            <div className="dashboard-sidebar-content">
-                <div className="dashboard-sidebar-icon">
-                <FontAwesomeIcon icon={faSuitcaseRolling} />
-                </div>
-                <div className="dashboard-sidebar-btn">
-                    <Link to="/bookingform"><button>Booking a Tour</button></Link>
-                </div>
-            </div>
-            <div className="dashboard-sidebar-content">
-                <div className="dashboard-sidebar-icon">
                 <FontAwesomeIcon icon={faPenNib} />
                 </div>
                 <div className="dashboard-sidebar-btn">
@@ -68,15 +52,7 @@ const SideBar = () => {
             </div>
             <div className="dashboard-sidebar-content">
                 <div className="dashboard-sidebar-icon">
-                <FontAwesomeIcon icon={faClipboardCheck} />
-                </div>
-                <div className="dashboard-sidebar-btn">
-                    <Link to="/review"><button>Tour Request</button></Link>
-                </div>
-            </div>
-            <div className="dashboard-sidebar-content">
-                <div className="dashboard-sidebar-icon">
-                <FontAwesomeIcon icon={faRoute} />
+                <FontAwesomeIcon icon={faSuitcaseRolling} />
                 </div>
                 <div className="dashboard-sidebar-btn">
                     <Link to="/newtour"><button>Add New Tour</button></Link>
@@ -87,7 +63,7 @@ const SideBar = () => {
                 <FontAwesomeIcon icon={faUserShield} />
                 </div>
                 <div className="dashboard-sidebar-btn">
-                    <Link to="/review"><button>Add Admin</button></Link>
+                    <Link to="/addAdmin"><button>Add Admin</button></Link>
                 </div>
             </div>
             <div className="dashboard-sidebar-content">
@@ -95,7 +71,7 @@ const SideBar = () => {
                 <FontAwesomeIcon icon={faList} />
                 </div>
                 <div className="dashboard-sidebar-btn">
-                    <Link to="/review"><button>All Tours</button></Link>
+                    <Link to="/tourList"><button>All Tours</button></Link>
                 </div>
             </div>
 

@@ -15,7 +15,7 @@ const BookingTourInfo = ({selectedTour}) => {
                 <p><small>{day} days | {country} Countries | {city} Cities <br /> {night} nights | {place} places</small></p>
                 <p><small>{tourType} | {activityLevel} | {serviceType}</small></p>
                 <p className="entry-fee">Entry Fee: <span>{entryFee}/= Taka</span></p>
-                <p className="age-limitation">Age Limitation: <span>{ageLimitation}</span></p>
+                <p className="age-limitation">Age Limit: <span>{ageLimitation}</span></p>
                 <p className="details-info">{shortDescription}</p>
 
                 <Link to="/booking/inquiry"><button>SEND INQUIRY</button></Link>

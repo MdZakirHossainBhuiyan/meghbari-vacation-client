@@ -16,6 +16,7 @@ import { createContext } from 'react';
 import { useState } from 'react';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
+import TourList from './Components/DashBoard/TourLists/TourLists';
 
 export const UserContext = createContext();
 
@@ -55,6 +56,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/newtour">
               <AddNewTour />
+            </PrivateRoute>
+            <PrivateRoute path="/tourList">
+              <TourList />
             </PrivateRoute>
           </Switch>
       </Router>

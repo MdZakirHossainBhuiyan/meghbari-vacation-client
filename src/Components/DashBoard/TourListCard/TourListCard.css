@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.tourList-card{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    flex-direction: row;
+}
+
+.tourList-cardImg{
+    width: 35%;
+    height: 200px;
+}
+
+.tourList-cardImg img{
+    width: 100%;
+    height: 200px;
+}
+
+.tourList-cardContent{
+    width: 65%;
+    height: 200px;
+    padding: 10px;
+    color: white;
+}
+
+.tourList-cardContent h4{
+    color: #b6935b;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tourList-cardButton button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #b6935b;
+    margin-right: 15px;
+}
+
+.tourList-cardButton button:hover{
+    background-color: aqua;
+}
