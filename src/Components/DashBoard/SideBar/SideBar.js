@@ -47,12 +47,20 @@ const SideBar = () => {
                 <FontAwesomeIcon icon={faPenNib} />
                 </div>
                 <div className="dashboard-sidebar-btn">
-                    <Link to="/review"><button>Write a Review</button></Link>
+                    <Link to="#"><button>Write Review</button></Link>
                 </div>
             </div>
             <div className="dashboard-sidebar-content">
                 <div className="dashboard-sidebar-icon">
                 <FontAwesomeIcon icon={faSuitcaseRolling} />
+                </div>
+                <div className="dashboard-sidebar-btn">
+                    <Link to="/tourRequest"><button>Tour Request</button></Link>
+                </div>
+            </div>
+            <div className="dashboard-sidebar-content">
+                <div className="dashboard-sidebar-icon">
+                <FontAwesomeIcon icon={faRoute} />
                 </div>
                 <div className="dashboard-sidebar-btn">
                     <Link to="/newtour"><button>Add New Tour</button></Link>
@@ -63,7 +71,7 @@ const SideBar = () => {
                 <FontAwesomeIcon icon={faUserShield} />
                 </div>
                 <div className="dashboard-sidebar-btn">
-                    <Link to="/addAdmin"><button>Add Admin</button></Link>
+                    <Link to="#"><button>Add Admin</button></Link>
                 </div>
             </div>
             <div className="dashboard-sidebar-content">

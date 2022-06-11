@@ -1,5 +1,7 @@
 import React from 'react';
 import './DashBoardContentCard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faPhone, faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 
 const DashBoardContentCard = ({item}) => {
 
@@ -14,9 +16,9 @@ const DashBoardContentCard = ({item}) => {
             <div className='tourCard-Property'>
                 <div className='tourCard-content'>
                     <h3>{item.clientFName} {item.clientLName}</h3>
-                    <p>{item.clientEmail}</p>
-                    <p>{item.clientPhone}</p>
-                    <p>{item.clientAddress}</p>
+                    <p><span  className='iconStyle'><FontAwesomeIcon icon={faEnvelope} /></span> {item.clientEmail}</p>
+                    <p><span  className='iconStyle'><FontAwesomeIcon icon={faPhone} /></span> {item.clientPhone}</p>
+                    <p><span  className='iconStyle'><FontAwesomeIcon icon={faLocationArrow} /></span> {item.clientAddress}</p>
                 </div>
                 <div className='tourCard-member'>
                     <table>

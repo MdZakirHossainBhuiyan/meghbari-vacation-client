@@ -17,6 +17,7 @@ import { useState } from 'react';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 import TourList from './Components/DashBoard/TourLists/TourLists';
+import Tours from './Pages/Tours/Tours';
 
 export const UserContext = createContext();
 
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/tours">
+              <Tours />
             </Route>
             <Route path="/ourService">
               <OurServiceHome />
