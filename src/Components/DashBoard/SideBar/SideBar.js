@@ -55,7 +55,7 @@ const SideBar = () => {
                 <FontAwesomeIcon icon={faSuitcaseRolling} />
                 </div>
                 <div className="dashboard-sidebar-btn">
-                    <Link to="/tourRequest"><button>Tour Request</button></Link>
+                    <Link to="/requestedTours"><button>Requested Tours</button></Link>
                 </div>
             </div>
             <div className="dashboard-sidebar-content">

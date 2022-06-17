@@ -6,8 +6,6 @@ import { useState } from 'react';
 const FeaturedTours = (props) => {
     const [tours, setTours] = useState([]);
 
-    console.log('feature tour', props.isHome);
-
     useEffect(() => {
         fetch('http://localhost:5000/featuredTours')
         .then(response => response.json())

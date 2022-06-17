@@ -18,6 +18,7 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 import TourList from './Components/DashBoard/TourLists/TourLists';
 import Tours from './Pages/Tours/Tours';
+import TourRequest from './Components/DashBoard/TourRequest/TourRequest';
 
 export const UserContext = createContext();
 
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <PrivateRoute path="/dashboard">
               <DashBoard />
+            </PrivateRoute>
+            <PrivateRoute path="/requestedTours">
+              <TourRequest />
             </PrivateRoute>
             <PrivateRoute exact path="/booking/inquiry">
               <BookingTourInquiryForm />

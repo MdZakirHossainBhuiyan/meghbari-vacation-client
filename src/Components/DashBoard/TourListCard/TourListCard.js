@@ -3,20 +3,30 @@ import { Link } from 'react-router-dom';
 import './TourListCard.css';
 
 const TourListCard = ({tour}) => {
-    const tourId = tour._id;
+    const tourId = tour?._id;
+
+    const handleDelete = (tourId) => {
+        fetch(`http://localhost:5000/delete/${tourId}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            alert('Deleted successfully');
+        })
+    }
 
     return (
         <div className='tourList-card'>
             <div className='tourList-cardImg'>
-                <img src={`data:image/png;base64,${tour.image.img}`} alt="" />
+                <img src={`data:image/png;base64,${tour?.image.img}`} alt="" />
             </div>
             <div className='tourList-cardContent'>
-                <h4>{tour.title}</h4>
-                <p>{tour.shortDescription}</p>
+                <h4>{tour?.title}</h4>
+                <p>{tour?.shortDescription}</p>
 
                 <div className='tourList-cardButton'>
                     <Link to={"/booking/"+tourId}><button>Details</button></Link>
-                    <Link to={"/delete/"+tourId}><button>Delete</button></Link>
+                    <button onClick={() => handleDelete(tourId)}>Delete</button>
                 </div>
             </div>
         </div>

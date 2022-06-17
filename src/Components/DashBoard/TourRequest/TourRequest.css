@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.requestedTour-section{
+    background-color: black;
+    font-family: 'Roboto Slab', sans-serif;
+    width: 100%;
+    height: auto;
+}
+
+.requestedTour-body{
+    width: 100%;
+    height: auto;
+    padding-left: 250px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.requestedTour-heading{
+    width: 98%;
+    background-color: rgb(44, 44, 44);
+    margin: 15px;
+}
+
+.requestedTour-heading h1{
+    color: #b6935b;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+}
+
+.requestedTour-cards{
+    height: auto;
+    display: grid;
+    grid: auto / auto auto;
+    grid-gap: 10px;
+    padding-left: 10px;
+    padding: 10px 10px;
+    padding-bottom: 600px;
+}
