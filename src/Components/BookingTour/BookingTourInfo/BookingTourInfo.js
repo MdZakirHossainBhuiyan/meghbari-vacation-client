@@ -18,7 +18,7 @@ const BookingTourInfo = ({selectedTour}) => {
                 <p className="age-limitation">Age Limit: <span>{ageLimitation}</span></p>
                 <p className="details-info">{shortDescription}</p>
 
-                <Link to="/booking/inquiry"><button>SEND INQUIRY</button></Link>
+                <Link to="/bookingForm/inquiry"><button>SEND INQUIRY</button></Link>
             </div>
         </section>
     );

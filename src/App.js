@@ -56,7 +56,7 @@ function App() {
             <PrivateRoute path="/requestedTours">
               <TourRequest />
             </PrivateRoute>
-            <PrivateRoute exact path="/booking/inquiry">
+            <PrivateRoute exact path="/bookingForm/inquiry">
               <BookingTourInquiryForm />
             </PrivateRoute>
             <PrivateRoute path="/bookingform/:selectedTourId">

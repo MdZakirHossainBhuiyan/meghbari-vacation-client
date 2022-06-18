@@ -7,7 +7,6 @@ import BookingTourReservation from '../BookingTourReservation/BookingTourReserva
 import './BookingTourNavBar.css';
 
 const BookingTourNavBar = ({selectedTour}) => {
-    console.log(selectedTour.overview);
     const [overviewBtn, setOverviewBtn] = useState(true);
     const [itineraryBtn, setItineraryBtn] = useState(false);
     const [includeBtn, setIncludeBtn] = useState(false);
