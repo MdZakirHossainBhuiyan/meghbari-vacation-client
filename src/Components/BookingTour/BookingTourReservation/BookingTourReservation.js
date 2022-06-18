@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './BookingTourReservation.css';
 
 const BookingTourReservation = ({selectedTour}) => {
+    const [bookedTour, setBookedTour] = useState([]);
+
     let {seat} = selectedTour;
     const selectedTourId = selectedTour._id;
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/bookedTour/${selectedTourId}`)
+        .then(res => res.json())
+        .then(data => setBookedTour(data))
+    }, [selectedTourId])
+
     const startingDate = selectedTour.startDate;
-    const startingDay = +(startingDate[startingDate.length-2]+startingDate[startingDate.length-1]);
-    const today = (new Date()).getDate();
-    let remainingDay = startingDay - today;
+
+    const presentDate = Math.abs((new Date().getTime() / 1000).toFixed(0));
+    const futureDate = Math.abs((new Date(startingDate).getTime() / 1000).toFixed(0));
+    let remainingDay = Math.floor((futureDate - presentDate)/86400);
+    
     if(remainingDay <= 0){
         remainingDay = "00";
         seat = "00";
     }
     
+    console.log('booked tour', bookedTour);
 
     return (
         <section className="booking-tour-reservation">

@@ -20,7 +20,7 @@ const TopHeader = () => {
             const signedInUser = false;
             setLoggedInUser(signedInUser);
         }).catch((error) => {
-
+            
         });
     }
 

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import FeaturedTour from '../FeatureTour/FeaturedTour';
 import './FeaturedTours.css';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCarSide } from '@fortawesome/free-solid-svg-icons';
 
 const FeaturedTours = (props) => {
     const [tours, setTours] = useState([]);
@@ -15,7 +17,10 @@ const FeaturedTours = (props) => {
     return (
         <section className="featured-tours-content">
             {
-                (props.isHome!='No') && <h2>Featured Tours</h2>
+                (props.isHome!='No') && <div>
+                    <h2>Featured Tours</h2>
+                    <p className='service-iconStyle'>-- <FontAwesomeIcon icon={faCarSide} /> --</p>
+                </div>
             }
             <div className="container featured-tours-items">
                 {

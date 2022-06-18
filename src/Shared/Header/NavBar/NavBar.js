@@ -24,9 +24,9 @@ const NavBar = () => {
                 <Link to="/ourService">services</Link>
             </div>
             {
-                loggedInUser.email ? <div className="nav-item">
+                loggedInUser.email && <div className="nav-item">
                     <Link to="/dashboard">Dashboard</Link>
-                </div> : <div></div>
+                </div>
             }
         </div>
     );

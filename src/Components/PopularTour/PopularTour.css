@@ -47,3 +47,7 @@
     margin: 0px 0px 40px 70px;
     justify-content: flex-end;
 }
+
+.popular-tour-content button:hover{
+    background-color: black;
+}

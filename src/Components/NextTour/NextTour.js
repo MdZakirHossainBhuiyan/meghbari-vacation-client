@@ -12,8 +12,8 @@ const NextTour = () => {
                     <h4>up coming tour</h4>
                     <h1>cox's bazar</h1>
                     <p className="nt-info-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero libero iusto iste ipsum quas inventore dolores vitae doloremque quos minima. Quaerat, cupiditate. Sint consectetur at blanditiis nostrum?</p>
-                    <p className="nt-info-date">20 Feb - 27 Feb -6 Mar</p>
-                    <button>Read more</button>
+                    <p className="nt-info-date">20 Feb - 27 Feb</p>
+                    <button>Read More</button>
                 </div>
             </div>
             <div className="nt-img">

@@ -7,11 +7,12 @@
     height: 70px;
     width: 100%;
     background-color: black;
-    display: flex;
+    font-family: 'Roboto Slab', sans-serif;
 }
 
 .th-container{
     display: flex;
+    flex-direction: row;
 }
 
 .Heading{
@@ -22,10 +23,10 @@
 }
 
 .Heading p{
-    font-family: Times New Roman, Times, serif;
     text-transform: uppercase;
     padding: 17px 10px;
     font-size: 12px;
+    font-weight: 100;
 }
 
 .Heading h3{
@@ -56,8 +57,9 @@
 }
 
 .call-us-info{
+    line-height: 15px;
     padding-left: 10px;
-    padding-top: 8px;
+    padding-top: 18px;
     color: white;
     font-family: Times New Roman, Times, serif;
 }

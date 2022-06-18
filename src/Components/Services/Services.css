@@ -11,10 +11,16 @@
 .services-content h2{
     text-align: center;
     color: #ffffff;
-    font-family: 'Roboto Slab', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
     font-weight: 400;
     padding-top: 70px;
+}
+
+.service-iconStyle{
+    text-align: center;
+    color: #fbfdfd;
+    font-size: 25px;
 }
 
 .services-items{

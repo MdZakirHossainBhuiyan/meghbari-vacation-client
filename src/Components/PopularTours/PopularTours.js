@@ -20,7 +20,7 @@ const PopularTours = () => {
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, sunt ipsa reiciendis repellat fugiat exercitationem?</p>
                 </div>
                 <div className="popular-tour-header-link">
-                    <a href="/view">/ View All Tours</a>
+                    <a href="/tours">/ View All Tours</a>
                 </div>
             </div>
             <div className="container popular-tours-items">

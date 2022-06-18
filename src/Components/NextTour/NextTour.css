@@ -48,13 +48,19 @@
 }
 
 .nt-info-content button{
-    width: 110px;
-    height: 40px;
     border: none;
     background-color: #b6925B;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-family: 'Roboto Slab', sans-serif;
+    padding: 10px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+.nt-info-content button:hover{
+    background-color: black;
+    color: #b6925B;
+    border-radius: 50px;
+    transition-duration: 0.7s;
 }
 
 .nt-img{
