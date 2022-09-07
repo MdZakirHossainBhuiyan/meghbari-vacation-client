@@ -13,7 +13,7 @@ const BookingForm = () => {
     const [clientInfo, setClientInfo] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking/'+ selectedTourId)
+        fetch('https://thawing-mesa-61898.herokuapp.com/booking/'+ selectedTourId)
         .then(response => response.json())
         .then(data => setSelectedTourInfo(data))
     }, [selectedTourId])
@@ -41,7 +41,7 @@ const BookingForm = () => {
         formData.append('childrenMember', clientInfo.totalMemberChildren);
         formData.append('status', "Pending");
 
-        fetch('http://localhost:5000/bookedTour', {
+        fetch('https://thawing-mesa-61898.herokuapp.com/bookedTour', {
             method: 'POST',
             body: formData
         })

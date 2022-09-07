@@ -20,18 +20,28 @@
 }
 
 .featuredTourItem-info{
+    height: 170px;
     padding: 10px 10px 10px 20px;
     color: #ffffff;
     font-family: 'Roboto Slab', sans-serif;
 }
 
 .featuredTourItem-info h3{
+    width: 100%;
+    height: 40px;
     color: #b6935c;
     font-weight: 400;
     font-size: 16px;
 }
 
 .featuredTourItem-info p{
+    height: 60px;
+    display: -webkit-box;
+    max-width: 300px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding-top: 10px;
     text-align: justify;
     font-size: 15px;

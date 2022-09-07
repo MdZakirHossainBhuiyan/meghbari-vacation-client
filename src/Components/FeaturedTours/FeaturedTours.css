@@ -25,3 +25,9 @@
     padding: 10px;
     padding-bottom: 50px;
 }
+
+.circularBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

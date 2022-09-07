@@ -1,3 +1,4 @@
+import { CircularProgress } from '@mui/material';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import DashBoardContentCard from '../DashBoardContentCard/DashBoardContentCard';
@@ -7,24 +8,24 @@ import './DashBoard.css';
 const DashBoard = () => {
     const [searchEmail, setSearchEmail] = useState(null);
     const [searchedTour, setSearchedTour] = useState(null);
-    const [isButtonClicked, setIsButtonClicked] = useState(false);
+    const [loader, setLoader] = useState(false);
 
     const handleChange = e => {
         setSearchEmail(e.target.value);
     }
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        setIsButtonClicked(true);
-    }
+        setLoader(true);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/searchedTour')
-        .then(response => response.json())
-        .then(data => setSearchedTour(
+        const result = await fetch('https://thawing-mesa-61898.herokuapp.com/searchedTour')
+        const data = await result.json();
+        setSearchedTour(
             data.filter(tour => tour.clientEmail==searchEmail)
-        ))
-    }, [searchEmail])
+        )
+
+        setLoader(false);
+    }
 
     return (
         <section className='user-dashboard'>
@@ -46,11 +47,22 @@ const DashBoard = () => {
                 </div>
             </div>
 
-            <div className='searchedTourArea'>
-                {
-                    isButtonClicked && searchedTour.map(item => <DashBoardContentCard  item={item} />)
-                }
-            </div>
+            {
+                (!loader)?
+                <div className='searchedTourArea'>
+                    {
+                        (searchedTour?.length!==0)?searchedTour?.map(item => <DashBoardContentCard  item={item} />)
+                        :
+                        <p className='dashboardWarning'>
+                            You have no booking information
+                        </p>
+                    }
+                </div>
+                :
+                <div className='searchedTourArea circularBar'>
+                    <CircularProgress />
+                </div>
+            }
         </section>
     );
 };

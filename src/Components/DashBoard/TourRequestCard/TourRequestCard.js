@@ -8,7 +8,7 @@ const TourRequestCard = ({item}) => {
     const [updateItem, setUpdateItem] = useState(item);
 
     const handleStatus = (id) => {
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://thawing-mesa-61898.herokuapp.com/update/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

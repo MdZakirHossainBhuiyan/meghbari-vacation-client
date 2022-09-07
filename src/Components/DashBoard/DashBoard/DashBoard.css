@@ -55,6 +55,10 @@
     padding-left: 20px;
 }
 
+.userDashboard-inputField input:focus{
+    outline: none;
+}
+
 .userDashboard-inputButton{
     width: 150px;
     height: 50px;
@@ -89,4 +93,21 @@
     padding: 10px 0px 10px 0px;
     padding: 10px 10px;
     padding-bottom: 600px;
+}
+
+.dashboardWarning{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.circularBar{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

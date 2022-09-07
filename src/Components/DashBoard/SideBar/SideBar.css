@@ -6,27 +6,53 @@
 .dashboard-sidebar{
     background-color: rgb(44, 44, 44);
     width: 250px;
-    height: 100vh;
-    padding-top: 20px;
+    height: 93vh;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #ffffff;
 }
 
-.dashboard-sidebar-content{
+.dashboardSidebarTopPart{
     width: 100%;
+    height: auto;
+}
+
+.dashboardSidebarContent{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.dashboardSidebarDownPart{
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #b6935b;
+}
+
+.dashboardSidebarButton{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     color: #b6935b;
-    padding: 5px 30px;
     font-size: 18px;
 }
 
-.dashboard-sidebar-icon{
-    width: 20%;
+.dashboardSidebarContentIcon{
+    width: 25%;
     font-size: 20px;
-    padding-right: 20px;
+    padding: 0px 20px;
 }
 
-.dashboard-sidebar-btn{
-    padding-top: 4px;
-    width: 80%;
+.dashboard-sidebar-icon{
+    font-size: 20px;
+    padding-left: 20px;
 }
 
 .dashboard-sidebar-btn button{
@@ -38,9 +64,4 @@
 
 .dashboard-sidebar-btn button:hover{
     color: #b6935b;
-}
-
-.dashboard-logout{
-    margin-top: 300px;
-    border-top: 1px solid gray;
 }

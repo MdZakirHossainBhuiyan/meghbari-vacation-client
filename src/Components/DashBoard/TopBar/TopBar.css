@@ -3,15 +3,20 @@
     padding: 0;
 }
 
-.dashboard-top-bar{
+.dashboardTopBar{
     width: 100%;
     height: 50px;
     position: fixed;
     background-color: rgb(44, 44, 44);
 }
 
-.dashboard-top-bar-contain{
+.dashboardTopBarContain{
+    width: 100%;
+    height: 50px;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .dashboard-top-bar-heading{

@@ -21,7 +21,7 @@
 }
 
 .tourCard-status h2{
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .status-highlighter{
@@ -30,9 +30,9 @@
     background-color: aqua;
     margin-left: 20px;
     color: black;
-    text-align: center;
     border-radius: 50px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .tourCard-Property{

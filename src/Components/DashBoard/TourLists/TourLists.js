@@ -1,3 +1,4 @@
+import { CircularProgress } from '@mui/material';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -10,13 +11,17 @@ const TourLists = () => {
     const [loader, setLoader] = useState(false);
 
     useEffect(() => {
-        setLoader(true);
+        const fetchToursData = async () => {
+            setLoader(true);
 
-        fetch('http://localhost:5000/featuredTours')
-        .then(response => response.json())
-        .then(data => setTours(data))
+            const result = await fetch('https://thawing-mesa-61898.herokuapp.com/featuredTours');
+            const data = await result.json();
+            setTours(data);
 
-        setLoader(false);
+            setLoader(false);
+        }
+
+        fetchToursData();
     }, [])
 
 
@@ -27,11 +32,22 @@ const TourLists = () => {
                 <div className='tourLists-content'>
                     <h3>All Tour Packages</h3>
                 </div>
-                <div className='tourLists-cardArea'>
-                    {
-                        tours.map(tour => <TourListCard tour={tour} />)
-                    }
-                </div>
+                {
+                    (!loader)?
+                    <div className='tourLists-cardArea'>
+                        {
+                            (tours?.length!==0)?tours?.map(tour => <TourListCard tour={tour} />)
+                            :
+                            <p className='warning'>
+                                There have no tours
+                            </p>
+                        }
+                    </div>
+                    :
+                    <div className='circularBar'>
+                        <CircularProgress />
+                    </div>
+                }
             </div>
         </section>
     );

@@ -13,7 +13,7 @@ const FeaturedTour = ({tour}) => {
             <div className="featuredTourItem-info">
                 <h3>{tour.title}</h3>
                 <p>{tour.shortDescription}</p>
-                <Link to={"/booking/"+tourId}><button>BOOK NOW</button></Link>
+                <Link to={"/booking/"+tourId}><button>Read More</button></Link>
             </div>
         </div>
     );

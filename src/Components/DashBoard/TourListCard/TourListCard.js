@@ -6,7 +6,7 @@ const TourListCard = ({tour}) => {
     const tourId = tour?._id;
 
     const handleDelete = (tourId) => {
-        fetch(`http://localhost:5000/delete/${tourId}`, {
+        fetch(`https://thawing-mesa-61898.herokuapp.com/delete/${tourId}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

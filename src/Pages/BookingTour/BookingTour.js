@@ -12,7 +12,7 @@ const BookingTour = () => {
     const [selectedTour, setSelectedTour] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking/'+ tourId)
+        fetch('https://thawing-mesa-61898.herokuapp.com/booking/'+ tourId)
         .then(response => response.json())
         .then(data => setSelectedTour(data))
     }, [tourId])

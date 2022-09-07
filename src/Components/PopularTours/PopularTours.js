@@ -2,14 +2,24 @@ import React, { useEffect } from 'react';
 import './PopularTours.css';
 import PopularTour from '../PopularTour/PopularTour';
 import { useState } from 'react';
+import { CircularProgress } from '@mui/material';
 
 const PopularTours = () => {
     const [pTours, setPTours] = useState([]);
+    const [loader, setLoader] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/popularTours")
-        .then(response => response.json())
-        .then(data => setPTours(data))
+        const fetchToursData = async () => {
+            setLoader(true);
+
+            const result = await fetch("https://thawing-mesa-61898.herokuapp.com/popularTours");
+            const data = await result.json();
+            setPTours(data);
+
+            setLoader(false);
+        }
+
+        fetchToursData();
     }, [])
 
     return (
@@ -23,11 +33,24 @@ const PopularTours = () => {
                     <a href="/tours">/ View All Tours</a>
                 </div>
             </div>
-            <div className="container popular-tours-items">
-                {
-                    pTours.map(popularTour => <PopularTour popularTour={popularTour} />)
-                }
-            </div>
+
+            {
+                (!loader)?
+                <div className="container popular-tours-items">
+                    {
+                        (pTours?.length!==0)?pTours?.map(popularTour => <PopularTour popularTour={popularTour} />)
+                        :
+                        <p className='warning'>
+                            There have no tours
+                        </p>
+                        
+                    }
+                </div>
+                :
+                <div className='circularBar'>
+                    <CircularProgress />
+                </div>
+            }
         </section>
     );
 };

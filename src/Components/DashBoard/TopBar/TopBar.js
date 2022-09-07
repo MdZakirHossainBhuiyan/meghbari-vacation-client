@@ -9,8 +9,8 @@ const TopBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     return (
-        <section className="dashboard-top-bar">
-            <div className="container dashboard-top-bar-contain">
+        <section className="dashboardTopBar">
+            <div className="container dashboardTopBarContain">
                 <div className="dashboard-top-bar-heading">
                     <img src={loggedInUser.photoURL} alt="" />
                     <h1><span>Hello,</span><br />{loggedInUser.name}</h1>

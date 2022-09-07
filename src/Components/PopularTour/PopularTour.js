@@ -14,7 +14,7 @@ const PopularTour = ({popularTour}) => {
             </div>
             <p className="pt-description">{popularTour.shortDescription}</p>
 
-            <Link to={"/booking/"+tourId}><button>BOOK NOW</button></Link>
+            <Link to={"/booking/"+tourId}><button>Read More</button></Link>
         </div>
     );
 };

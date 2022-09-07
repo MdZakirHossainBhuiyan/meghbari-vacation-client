@@ -53,7 +53,7 @@ const AddNewTour = () => {
         formData.append('place', info.place);
 
 
-        fetch('http://localhost:5000/addTour', {
+        fetch('https://thawing-mesa-61898.herokuapp.com/addTour', {
             method: 'POST',
             body: formData
         })
