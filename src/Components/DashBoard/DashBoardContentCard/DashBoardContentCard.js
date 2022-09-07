@@ -9,7 +9,7 @@ const DashBoardContentCard = ({item}) => {
             <div className='tourCard-status'>
                 <h2>{item.tourTitle}</h2>
                 <div className='status-highlighter'>
-                    <p>{item.status}</p>
+                    <p className='tourStatus'>{item.status}</p>
                 </div>
             </div>
             <div className='tourCard-Property'>
