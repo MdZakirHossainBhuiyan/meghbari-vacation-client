@@ -12,7 +12,7 @@ const BookingTour = () => {
     const [selectedTour, setSelectedTour] = useState({});
 
     useEffect(() => {
-        fetch('https://thawing-mesa-61898.herokuapp.com/booking/'+ tourId)
+        fetch('https://meghbari-vacation-server.vercel.app/booking/'+ tourId)
         .then(response => response.json())
         .then(data => setSelectedTour(data))
     }, [tourId])

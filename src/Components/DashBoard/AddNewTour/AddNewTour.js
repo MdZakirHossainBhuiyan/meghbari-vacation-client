@@ -53,7 +53,7 @@ const AddNewTour = () => {
         formData.append('place', info.place);
 
 
-        fetch('https://thawing-mesa-61898.herokuapp.com/addTour', {
+        fetch('https://meghbari-vacation-server.vercel.app/addTour', {
             method: 'POST',
             body: formData
         })

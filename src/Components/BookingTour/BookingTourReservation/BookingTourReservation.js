@@ -9,7 +9,7 @@ const BookingTourReservation = ({selectedTour}) => {
     const selectedTourId = selectedTour._id;
 
     useEffect(() => {
-        fetch('https://thawing-mesa-61898.herokuapp.com/tourInfo/'+ selectedTourId)
+        fetch('https://meghbari-vacation-server.vercel.app/tourInfo/'+ selectedTourId)
         .then(res => res.json())
         .then(data => setBookedInfo(data))
     }, [selectedTourId])

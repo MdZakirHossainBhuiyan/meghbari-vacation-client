@@ -8,7 +8,7 @@ const TourRequestCard = ({item}) => {
     const [updateItem, setUpdateItem] = useState(item);
 
     const handleStatus = (id) => {
-        fetch(`https://thawing-mesa-61898.herokuapp.com/update/${id}`, {
+        fetch(`https://meghbari-vacation-server.vercel.app/update/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

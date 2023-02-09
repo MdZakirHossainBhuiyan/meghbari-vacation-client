@@ -41,7 +41,7 @@ const BookingForm = () => {
         formData.append('childrenMember', clientInfo.totalMemberChildren);
         formData.append('status', "Pending");
 
-        fetch('https://thawing-mesa-61898.herokuapp.com/bookedTour', {
+        fetch('https://meghbari-vacation-server.vercel.app/bookedTour', {
             method: 'POST',
             body: formData
         })

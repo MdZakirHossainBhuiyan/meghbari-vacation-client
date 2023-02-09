@@ -18,7 +18,7 @@ const DashBoard = () => {
         event.preventDefault();
         setLoader(true);
 
-        const result = await fetch('https://thawing-mesa-61898.herokuapp.com/searchedTour')
+        const result = await fetch('https://meghbari-vacation-server.vercel.app/searchedTour')
         const data = await result.json();
         setSearchedTour(
             data.filter(tour => tour.clientEmail==searchEmail)

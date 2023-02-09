@@ -12,7 +12,7 @@ const PopularTours = () => {
         const fetchToursData = async () => {
             setLoader(true);
 
-            const result = await fetch("https://thawing-mesa-61898.herokuapp.com/popularTours");
+            const result = await fetch("https://meghbari-vacation-server.vercel.app/popularTours");
             const data = await result.json();
             setPTours(data);
 
